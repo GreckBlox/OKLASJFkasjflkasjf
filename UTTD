@@ -1,0 +1,3198 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "UTTD Script",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "UTTD Script",
+   LoadingSubtitle = "By GreckBlox/KillerBlox",
+   Theme = "Amethyst", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = true,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Test"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("The End")
+local Section = Tab:CreateSection("Souls")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe BlueSoul",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 33, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 33,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe GreenSoul",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 34, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 34,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe OrangeSoul",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 35, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 35,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe PurpleSoul",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 36, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 36,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe YellowSoul",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 37, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 37,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe CyanSoul",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 38, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 38,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe OmegaFlowey",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1007, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1007,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Asriel",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1013, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1013,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Ruins")
+local Section = Tab:CreateSection("Common Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Froggit",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Vegetoid",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Loox",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 3, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 3,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Migosp",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 4, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 4,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Moldsmal",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 5, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 5,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Whimsum",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 6, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 6,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Elite Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Napstablook",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 7, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 7,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Toriel",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1002, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1002,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Snowdin")
+local Section = Tab:CreateSection("Common Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Snowdrake",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 8, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 8,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe IceCap",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 9, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 9,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe LesserDog",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 10, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 10,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Gyftrot",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 11, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 11,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Jerry",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 12, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 12,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Elite Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Doggo",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 13, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 13,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Dogami",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 14, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 14,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Dogaressa",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 15, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 15,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe GreaterDog",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 17, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 17,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Papyrus",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1003, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1003,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Waterfall")
+local Section = Tab:CreateSection("Common Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Aaron",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 18, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 18,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Woshua",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 19, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 19,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Elite Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Moldbygg",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 20, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 20,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Shyren",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 21, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 21,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe MadDummy",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 42, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 42,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Undyne",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1004, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1004,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe UndyneTheUndying",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1008, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1008,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Hotland")
+local Section = Tab:CreateSection("Common Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Vulkin",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 22, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 22,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Tsunderplane",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 23, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 18,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Pyrope",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 24, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 24,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Elite Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe RoyalGuard01",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 25, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 25,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe RoyalGuard02",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 26, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 26,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Mettaton",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 27, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 27,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Muffet",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1005, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1005,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("CORE")
+local Section = Tab:CreateSection("Common Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe FinalFroggit",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 28, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 28,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Whimsalot",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 29, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 29,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Astigmatism",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 30, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 30,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Elite Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe KnightKnight",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 31, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 31,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe MadJick",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 32, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 32,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe MettatonEX",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1006, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1006,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe MettatonNEO",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1009, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1009,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Last Corridor")
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Sans",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1010, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1010,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("New Home")
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Asgore",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1011, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1011,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("True Lab")
+local Section = Tab:CreateSection("Elite Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe MemoryHead",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 45, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 45,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Endogeny",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 46, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 46,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe ReaperBird",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 47, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 47,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe LemonBread",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 48, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 48,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Snowdrake'sMother",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 49, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 49,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe MadMewMew",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1012, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1012,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Special Encounters")
+local Section = Tab:CreateSection("Secret Monsters")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Dummy",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 39, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 39,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Temmie",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 40, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 40,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Alphys",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 42, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 42,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Glyde",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 43, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 43,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe SoSorry",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 44, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 44,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Parsnik",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 50, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 50,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Moldessa",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 51, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 51,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Migospel",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 52, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 52,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Field Of Hopes And Dreams")
+local Section = Tab:CreateSection("Lightners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Kris",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2001, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2001,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Susie",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2002, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2002,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Ralsei",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2003, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2003,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Darkners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Rudinn",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 501, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 501,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Hathy",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 502, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 502,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Ponman",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 503, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 503,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Jigsawry",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 504, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 504,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Elite Darkners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe C.Round",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 505, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 505,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe K.Round",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 506, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 506,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Forest")
+local Section = Tab:CreateSection("Darkners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Rabbick",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 507, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 507,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Bloxer",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 508, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 508,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Clover",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 509, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 509,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe StarwalkerBird",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 510, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 510,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Darkners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Lancer",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2004, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2004,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Card Castle")
+local Section = Tab:CreateSection("Darkners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe RudinnRanger",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 511, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 511,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe HeadHathy",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 512, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 512,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Special Darkners")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe King",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2005, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2005,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("???")
+local Section = Tab:CreateSection("Secret Darkner")
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Jevil",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 2006, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 2006,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Dupe Frisk",
+    Callback = function()
+        _G.LoopEquip = not _G.LoopEquip  
+        
+        if _G.LoopEquip then
+            _G.LoopThread = task.spawn(function()
+                while _G.LoopEquip do
+                    local equipArgs = {
+                        [1] = 1001, 
+                        [2] = 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+                    task.wait(0.03)
+                    
+                    local unequipArgs = {
+                        [1] = 1001,
+                        [2] = 2
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+                    task.wait(0.05)
+                end
+            end)
+        else
+            if _G.LoopThread then
+                task.cancel(_G.LoopThread)
+                _G.LoopThread = nil
+            end
+        end
+    end,
+})
+
+local Tab = Window:CreateTab("Equip Special Souls in Normal Slots")
+local Section = Tab:CreateSection("Frisk")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Frisk",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1001,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Frisk",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1001,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Toriel")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Toriel",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1002,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Toriel",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1002,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Papyrus")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Papyrus",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1003,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Papyrus",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1003,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Undyne")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Undyne",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1004,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Undyne",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1004,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("UndyneTheUndying")
+
+local Button = Tab:CreateButton({
+   Name = "Equip UndyneTheUndying",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1008,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip UndyneTheUndying",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1008,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Muffet")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Muffet",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1005,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Muffet",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1005,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("MettatonEX")
+
+local Button = Tab:CreateButton({
+   Name = "Equip MettatonEX",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1006,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip MettatonEX",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1006,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("MettatonNEO")
+
+local Button = Tab:CreateButton({
+   Name = "Equip MettatonNEO",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1009,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip MettatonNEO",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1009,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Sans")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Sans",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1010,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Sans",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1010,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Asgore")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Asgore",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1011,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Asgore",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1011,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("OmegaFlowey")
+
+local Button = Tab:CreateButton({
+   Name = "Equip OmegaFlowey",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1007,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip OmegaFlowey",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1007,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+local Section = Tab:CreateSection("Asriel")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Asriel",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1013,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Asriel",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1013,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("MadMewMew")
+
+local Button = Tab:CreateButton({
+   Name = "Equip MadMewMew",
+   Callback = function()
+       local equipArgs = {
+           [1] = 1012,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip MadMewMew",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 1012,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("Kris")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Kris",
+   Callback = function()
+       local equipArgs = {
+           [1] = 2001,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Kris",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 2001,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("Susie")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Susie",
+   Callback = function()
+       local equipArgs = {
+           [1] = 2002,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Susie",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 2002,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("Ralsei")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Ralsei",
+   Callback = function()
+       local equipArgs = {
+           [1] = 2003,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Ralsei",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 2003,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("Lancer")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Lancer",
+   Callback = function()
+       local equipArgs = {
+           [1] = 2004,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Lancer",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 2004,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("King")
+
+local Button = Tab:CreateButton({
+   Name = "Equip King",
+   Callback = function()
+       local equipArgs = {
+           [1] = 2005,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip King",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 2005,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+
+local Section = Tab:CreateSection("Jevil")
+
+local Button = Tab:CreateButton({
+   Name = "Equip Jevil",
+   Callback = function()
+       local equipArgs = {
+           [1] = 2006,
+           [2] = 1
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
+   end,
+})
+                    
+local Button = Tab:CreateButton({
+   Name = "Unequip Jevil",
+   Callback = function()
+       local unequipArgs = {
+           [1] = 2006,
+           [2] = 2
+       }
+       game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
+   end,
+})
+
+Rayfield:LoadConfiguration()
