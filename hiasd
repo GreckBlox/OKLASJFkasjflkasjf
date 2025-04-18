@@ -252,7 +252,7 @@ if not whitelist[LocalPlayer.Name] and not whitelist[tostring(LocalPlayer.UserId
 end
 
 local success, result = pcall(function()
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/GreckBlox/aeffe/refs/heads/main/UTTD"))()
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/GreckBlox/OKLASJFkasjflkasjf/refs/heads/main/UTTD"))()
 end)
 
 if not success then
