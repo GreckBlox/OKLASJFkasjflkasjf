@@ -4,8 +4,8 @@ local whitelist = {
     ["Andrea_TaMare"] = true,
     ["blackgoku1249493"] = true,
     ["alesnemes11"] = true,
-	["FeelThePowerOfChaos"] = true,
-	["Haku_S3np4i"] = true,
+    ["FeelThePowerOfChaos"] = true,
+    ["Haku_S3np4i"] = true,
 }
 
 local Players = game:GetService("Players")
