@@ -1,3 +1,4 @@
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "UTTD Script",
@@ -49,14 +50,14 @@ local Button = Tab:CreateButton({
                         [2] = 1
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
-                    task.wait(0.03)
+                    task.wait(0.1)
                     
                     local unequipArgs = {
                         [1] = 33,
                         [2] = 2
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
-                    task.wait(0.05)
+                    wait(0.1)
                 end
             end)
         else
@@ -81,14 +82,14 @@ local Button = Tab:CreateButton({
                         [2] = 1
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
-                    task.wait(0.03)
+                    wait(0.1)
                     
                     local unequipArgs = {
                         [1] = 34,
                         [2] = 2
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
-                    task.wait(0.05)
+                    wait(0.1)
                 end
             end)
         else
@@ -113,14 +114,14 @@ local Button = Tab:CreateButton({
                         [2] = 1
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
-                    task.wait(0.03)
+                    wait(0.1)
                     
                     local unequipArgs = {
                         [1] = 35,
                         [2] = 2
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
-                    task.wait(0.05)
+                    wait(0.1)
                 end
             end)
         else
