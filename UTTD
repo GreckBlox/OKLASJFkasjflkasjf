@@ -311,14 +311,14 @@ local Button = Tab:CreateButton({
                         [2] = 1
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(equipArgs))
-                    task.wait(0.03)
+                    wait(0.1)
                     
                     local unequipArgs = {
                         [1] = 1,
                         [2] = 2
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Equip"):FireServer(unpack(unequipArgs))
-                    task.wait(0.05)
+                    wait(0.1)
                 end
             end)
         else
