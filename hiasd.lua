@@ -1,5 +1,5 @@
 local whitelist = {
-    ["Gamerchan8181"]
+    ["Gamerchan8181"] = true,
     ["aegisoverdrive2"] = true,
     ["Eneslemekekek"] = true,
     ["Andrea_TaMare"] = true,
